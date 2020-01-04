@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="UAWSetup" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+	<cues>
+		<cue name="UAW_Initial_Setup" module="x4ep1_gamestart_uaw">
+			<conditions>
+				<event_cue_signalled cue="md.Setup.GameStart"/>
+			</conditions>
+			<actions>
+
+				<set_faction_known faction="faction.holyorder" known="true" />
+				<set_faction_known faction="faction.paranid" known="true" />
+				<set_faction_known faction="faction.teladi" known="true" />
+				<set_faction_known faction="faction.antigone" known="true" />
+				<set_faction_known faction="faction.ministry" known="true" />
+
+				<add_encyclopedia_entry type="factions" item="faction.holyorder.id"/>
+				<add_encyclopedia_entry type="factions" item="faction.paranid.id"/>
+				<add_encyclopedia_entry type="factions" item="faction.teladi.id"/>
+
+
+				<set_faction_relation faction="faction.holyorder" otherfaction="faction.argon" value="-1.00"/>
+				<set_faction_relation faction="faction.argon" otherfaction="faction.holyorder" value="-1.00"/>
+
+				<set_faction_relation faction="faction.teladi" otherfaction="faction.holyorder" value="-1.00"/>
+				<set_faction_relation faction="faction.holyorder" otherfaction="faction.teladi" value="-1.00"/>
+
+				<set_faction_relation faction="faction.teladi" otherfaction="faction.argon" value="-1.00"/>
+				<set_faction_relation faction="faction.argon" otherfaction="faction.teladi" value="-1.00"/>
+
+				<set_faction_relation faction="faction.paranid" otherfaction="faction.argon" value="-1.00"/>
+				<set_faction_relation faction="faction.argon" otherfaction="faction.paranid" value="-1.00"/>
+
+				<set_faction_relation faction="faction.teladi" otherfaction="faction.paranid" value="-1.00"/>
+				<set_faction_relation faction="faction.paranid" otherfaction="faction.teladi" value="-1.00"/>
+
+				<set_faction_relation faction="faction.paranid" otherfaction="faction.holyorder" value="-1.00"/>
+				<set_faction_relation faction="faction.holyorder" otherfaction="faction.paranid" value="-1.00"/>
+
+				<set_faction_mood faction="faction.holyorder" type="aggression" level="moodlevel.veryhigh"/>
+				<set_faction_mood faction="faction.teladi" type="aggression" level="moodlevel.veryhigh"/>
+				<set_faction_mood faction="faction.argon" type="aggression" level="moodlevel.veryhigh"/>
+				<set_faction_mood faction="faction.paranid" type="aggression" level="moodlevel.veryhigh"/>
+
+				<!-- Research is unlocked -->
+				<set_value name="player.entity.$x4ep1_hq_research_unlocked" />
+
+			</actions>
+		</cue>
+	</cues>
+</mdscript>
