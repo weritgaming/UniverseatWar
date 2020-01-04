@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<content id="UAW" name="Universe at War" description="The major powers are all at war with each other." author="Werit" version="0.1" date="2019-12-13" save="0" enabled="1">
- <text language="44" name="Universe at War" description="The major powers are all at war with each other." author="Werit" />
+<content id="ws_1959527578" name="Universe at War" description="The major powers are all at war with each other." author="Werit" version="1" date="2020-01-04" save="0" enabled="1" sync="false" lastupdate="1578150586">
+  <text language="44" name="Universe at War" description="The major powers are all at war with each other." author="Werit"/>
 </content>
